@@ -13,16 +13,13 @@ class Gamer{
   
   void Body(){
     stroke(255);
-    for (int i = 0; i < n; i ++){
-      line(m_nx[i], m_ny[i], x, y);
-      circle(m_nx[i], m_ny[i], 10);
+    for (int i = 0; i < n; i += 10){
+      line(m_nx[i]/5, m_ny[i]/5, x/5, y/5);
+      circle(m_nx[i]/5, m_ny[i]/5, 10/5);
     }
     
     fill(250);
-    circle(x,y, 25);
-    
-    fill(255,55,55);
-    circle(x+10 * cos(angle),y + 10 * sin(angle), 10); 
+    circle(x/5,y/5, 5);
   }
   
   void Move(int vert){
@@ -76,6 +73,7 @@ class Gamer{
   }
   
   void Lines(){
+    stroke(0);
     fill(155);
     rect(0, height/2, width, height/2);
     for (int i = 0; i < n; i++){

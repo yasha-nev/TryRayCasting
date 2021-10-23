@@ -33,7 +33,8 @@ class Object{
   }
   
   void Body(){
-    rect(x0, y0, x1 - x0, y1 - y0);
+    stroke(255);
+    rect(x0/5, y0/5, (x1 - x0)/5, (y1 - y0)/5);
   }
 }
 
@@ -44,10 +45,10 @@ class Rect extends Object{
     InitArray();
   }
   void Body(){
-    line(x0, y0, x1, y0);
-    line(x0, y1, x1, y1);
-    line(x0, y0, x0, y1 );
-    line(x1, y0, x1, y1);
+    line(x0/5, y0/5, x1/5, y0/5);
+    line(x0/5, y1/5, x1/5, y1/5);
+    line(x0/5, y0/5, x0/5, y1/5 );
+    line(x1/5, y0/5, x1/5, y1/5);
   }
   float[] DefinePoint(float lx0, float ly0,float lx1, float ly1){
     float[] xy = new float[2];

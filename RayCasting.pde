@@ -12,12 +12,17 @@ void setup(){
 void draw(){
   background(0);
   updatePlayers();
-  for (int i = 0; i <9; i++){
-    //o[i].Body();
-  }
+  
   g.RayCasting(o);
   g.Lines();
-  //g.Body();
+  
+  fill(0);
+  rect(0,0, 150,150);
+  
+  for (int i = 0; i <9; i++){
+    o[i].Body();
+  }
+  g.Body();
 }
 
 void keyPressed(){
